@@ -1,0 +1,70 @@
+{
+    "users":[
+        {
+            "id":1,
+            "first_name":"John",
+            "last_name":"Matthew",
+            "username":"john@gmail.com",
+            "address":"5 Johnson Adeleke street, irayo.",
+            "password":"@12345",
+            "gender":"male"
+        },
+        {
+            "id":2,
+            "first_name":"Bolu",
+            "last_name":"Adegboyega",
+            "username":"cena@gmail.com",
+            "address":"10 Aregbesola stree, Off Uniben gate, benin city.",
+            "password":"@abcde",
+            "gender":"female"
+        },
+        {
+            "id":3,
+            "first_name":"John",
+            "last_name":"Matthew",
+            "username":"john@gmail.com",
+            "address":"5 Johnson Adeleke street, irayo.",
+            "password":"@12345",
+            "gender":"male"
+        },
+        {
+            "id":4,
+            "first_name":"Bolu",
+            "last_name":"Adegboyega",
+            "username":"cena@gmail.com",
+            "address":"10 Aregbesola stree, Off Uniben gate, benin city.",
+            "password":"@abcde",
+            "gender":"female"
+        }
+    ],
+    "todos":[
+        {
+            "id":1,
+            "name":"Study Javascript",
+            "description":"",
+            "date":"2023-07-18T18:18:34",
+            "completed":false
+        },
+        {
+            "id":2,
+            "name":"What a tutorial",
+            "description":"",
+            "date":"2023-07-18T17:18:34",
+            "completed":false
+        },
+        {
+            "id":3,
+            "name":"Go to SI",
+            "description":"",
+            "date":"2023-07-18T14:18:34",
+            "completed":true
+        },
+        {
+            "id":4,
+            "name":"Go to SI 2",
+            "description":"",
+            "date":"2023-07-18T14:19:34",
+            "completed":true
+        }
+    ]
+}
