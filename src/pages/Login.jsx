@@ -1,10 +1,10 @@
 import React, { useState,useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { AppContext } from '../App';
+import  useApp  from '../hooks/useApp';
 const Login = () => {
     const [username,set_username] = useState('');
     const [password,set_password] = useState('');
-    const {set_user} = useContext(AppContext);
+    const {set_user} = useApp();
     const navigate = useNavigate();
     const handleLogin = (e)=>{
         e.preventDefault();

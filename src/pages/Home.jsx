@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
 import {FaUsers as UserIcon} from 'react-icons/fa';
 import {BsMastodon as TodoIcon} from 'react-icons/bs';
-import { useContext } from 'react';
-import { AppContext } from '../App';
+import useApp  from '../hooks/useApp';
+
 
 const Home = () => {
-  const {data} = useContext(AppContext);
+  const {data} = useApp();
   return (
     <Wrapper>
       <Link to="users">

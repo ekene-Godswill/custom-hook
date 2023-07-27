@@ -1,17 +1,12 @@
 import './App.css';
-import { createContext, useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import {Routes,Route} from 'react-router-dom';
 import {Login,Dashboard} from './pages';
 
-
-export const AppContext = createContext({});
+import  useApp  from './hooks/useApp';
 
 function App() {
-  const [user,set_user] = useState({});
-  const [data,set_data] = useState({
-    users_list:[],
-    tasks_list:[]
-  })
+  const {set_data} = useApp();
 
   useEffect(()=>{
      let fetch_users = fetch('http://localhost:3500/users')
@@ -35,13 +30,11 @@ function App() {
 
   return (
     <>
-    <AppContext.Provider value={{user,set_user,data}}>
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/login/*' element={<Login />} />
         <Route path='/dashboard/*' element={<Dashboard  />} />
       </Routes>
-    </AppContext.Provider>
     </>
   )
 }

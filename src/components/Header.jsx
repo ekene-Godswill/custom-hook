@@ -1,11 +1,11 @@
 import React,{useContext, useEffect} from 'react';
-import { AppContext } from '../App';
 import { useNavigate } from 'react-router-dom';
 import {BsPersonCircle as ProfileIcon} from 'react-icons/bs';
 import { styled } from 'styled-components';
+import  useApp  from '../hooks/useApp';
 
 const Header = () => {
-    const {user,set_user} = useContext(AppContext);
+    const {user,set_user} = useApp();
     const navigate = useNavigate();
 
     useEffect(()=>{
