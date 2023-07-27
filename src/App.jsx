@@ -19,6 +19,7 @@ function App() {
      .then(data =>{
         let temp_users = data[0].value;
         let temp_todos = data[1].value;
+        console.log(temp_todos,'todos');
         set_data({
           users_list:temp_users,
           tasks_list:temp_todos
