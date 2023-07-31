@@ -13,7 +13,7 @@ const ViewUser = ({data:user_data}) => {
 
   const handleEdit = (e)=>{
     e.preventDefault();
-    if(first_name,last_name,address){
+    if(first_name&&last_name&&address){
         fetch(`http://localhost:3500/users/${user_data.id}`,{
             method:"PATCH",
             headers:{
@@ -23,15 +23,9 @@ const ViewUser = ({data:user_data}) => {
         })
         .then(res => res.json())
         .then(res2 => {
-            fetch(`http://localhost:3500/users`,{
-                method:"GET",
-                headers:{
-                    "Content-type":"application/json",
-                },
-            }).then(res => res.json())
-            .then(result => {
-                set_data({...data,users_list:result})
-            })
+            const result = data.users_list.map(eUser => eUser.id == user_data.id?res2:euser);
+            set_data({...data,users_list:result})
+        
         })
         .catch(err => {
             console.log(err,"err")

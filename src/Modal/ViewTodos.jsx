@@ -14,7 +14,9 @@ const ViewTodos = ({data:user_data}) => {
 
   const handleEdit = (e)=>{
     e.preventDefault();
-    if(name,description,date,completed){
+    console.log(name,description,date,completed,
+        'data')
+    if(name&&description&&date){
         fetch(`http://localhost:3500/todos/${user_data.id}`,{
             method:"PATCH",
             headers:{
@@ -22,17 +24,14 @@ const ViewTodos = ({data:user_data}) => {
             },
             body:JSON.stringify({name,description,completed,date})
         })
-        .then(res => res.json())
+        .then(res => {
+            console.log(res,'res')
+            return res.json()
+        })
         .then(res2 => {
-            fetch(`http://localhost:3500/todos`,{
-                method:"GET",
-                headers:{
-                    "Content-type":"application/json",
-                },
-            }).then(res => res.json())
-            .then(result => {
-                set_data({...data,tasks_list:result})
-            })
+            const result = data.tasks_list.map(eTodo=> eTodo.id== user_data.id?res2:eTodo);
+            set_data({...data,tasks_list:result})
+            
         })
         .catch(err => {
             console.log(err,"err")

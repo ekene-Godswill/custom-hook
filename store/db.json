@@ -2,11 +2,11 @@
   "users": [
     {
       "id": 3,
-      "first_name": "Adebisi",
-      "last_name": "Ifeoluwa",
+      "first_name": "john",
+      "last_name": "white",
       "username": "ifeoluwa@gmail.com",
-      "address": "5 Johnson Adeleke street, irayo.",
-      "password": "@12345",
+      "address": "5 new heaven street",
+      "password": "12345",
       "gender": "male"
     },
     {
@@ -25,6 +25,15 @@
       "last_name": "Nzeribe",
       "address": "Eme court road nnewi",
       "id": 5
+    },
+    {
+      "gender": "Male",
+      "username": "nzeribechineye@gmail.com",
+      "first_name": "nzeribe",
+      "last_name": "Chinenye",
+      "address": "6 Adolor Road. Benin city.",
+      "password": "0987654321",
+      "id": 6
     }
   ],
   "todos": [
@@ -50,10 +59,10 @@
       "completed": true
     },
     {
-      "name": "kjkhj",
+      "name": "kjkhj2",
       "description": "khkjhkjhkj",
-      "date": "2023-01-01",
-      "completed": true,
+      "date": "2023-07-31",
+      "completed": false,
       "id": 5
     }
   ]

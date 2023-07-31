@@ -8,6 +8,7 @@ const AddUser = () => {
   const [last_name,set_last_name] = useState('');
   const [address,set_address] = useState('');
   const [username,set_username] = useState('');
+  const [password,set_password] = useState('');
   const [gender,set_gender] = useState(0);
   const {set_show_modal} = usePopup();
   const {set_data,data} = useApp();
@@ -15,9 +16,9 @@ const AddUser = () => {
   const handleAdd = (e)=>{
     e.preventDefault();
   
-    const body = {gender,username,first_name,last_name,address}
+    const body = {gender,username,first_name,last_name,address,password}
     console.log('body',body)
-    if(first_name,last_name,address,username,gender){
+    if(first_name&&last_name&&address&&username&&gender&&password){
        
         fetch(`http://localhost:3500/users`,{
             method:"POST",
@@ -57,6 +58,9 @@ const AddUser = () => {
             </div>
             <div>
                 <input type="email" value={username} placeholder="Email" onChange={(e)=>set_username(e.target.value)} />
+            </div>
+            <div>
+                <input type="text" value={password} placeholder="password" onChange={(e)=>set_password(e.target.value)} />
             </div>
             <div>
                 <select value={gender} onChange={(e)=>set_gender(e.target.value)}>
